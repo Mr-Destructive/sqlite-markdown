@@ -1,3 +1,6 @@
+//go:build inspect
+// +build inspect
+
 package main
 
 import (
