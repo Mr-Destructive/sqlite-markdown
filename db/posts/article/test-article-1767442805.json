@@ -1,13 +1,13 @@
 {
-  "title": "Updated Article 1767442805",
   "date": "2026-01-03",
-  "slug": "test-article-1767442805",
+  "excerpt": "Updated excerpt",
+  "section": "article",
+  "source": "turso",
   "status": "published",
-  "type": "article",
-  "description": "Updated excerpt",
   "tags": [
     "test",
     "api",
     "updated"
-  ]
+  ],
+  "title": "Updated Article 1767442805"
 }
