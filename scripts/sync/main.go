@@ -277,12 +277,12 @@ func parseFeedItem(item *gofeed.Item, rawContent string) (Post, bool) {
 	}
 
 	parts := strings.Split(path, "/")
-	section := "posts"
-	slug := path
-	if len(parts) > 1 {
-		section = parts[0]
-		slug = strings.Join(parts[1:], "/")
+	if len(parts) < 2 {
+		// URL has no slug (e.g. https://site/links/), it's a section index, skip.
+		return Post{}, false
 	}
+	section := parts[0]
+	slug := strings.Join(parts[1:], "/")
 
 	if section == "" {
 		section = "posts"
